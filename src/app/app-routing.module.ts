@@ -12,8 +12,7 @@ const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "room-book", component: RoomBookComponent},
   {path: "room-list", component: RoomListComponent},
-  {path: "room-detail", component: RoomDetailComponent}
-
+  {path: "room-list/:roomId", component: RoomDetailComponent}
 ];
 
 @NgModule({

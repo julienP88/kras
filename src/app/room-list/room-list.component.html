@@ -7,11 +7,11 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let floor of roomsByFloor.keys()">
+        <tr *ngFor="let floor of floors">
             <td>{{ floor }}</td>
             <td class="row">
                 <div class="container">
-                        <div *ngFor="let room of roomsByFloor.get(floor)" (click)="bookRoom(room)" >
+                        <div *ngFor="let room of roomsByFloor.get(floor)" (click)="showRoomDetails(room)" >
                                <div class="item">
                                    <h2>{{room.roomName}}</h2>
                                    <p>{{room.capacity}} Personen</p>
