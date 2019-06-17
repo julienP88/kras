@@ -4,7 +4,13 @@ export class Room {
     outlookName: string;
     telephon: string;
     floor: string;
-    capacity: bigint;
+    capacity: number;
     facilities: Array<string>;
 
+
+    constructor(_id: string,roomName: string,capacity: number){
+        this._id = _id;
+        this.roomName = roomName;
+        this.capacity = capacity;
+    }
 }
