@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class RoomListComponent implements OnInit {
 
-    private floors: IterableIterator<String>;
+    floors: IterableIterator<String>;
     private roomsByFloor: Map<String, Array<Room>>;
 
     constructor(private dataService: DataService,

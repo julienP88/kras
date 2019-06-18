@@ -1,32 +1,33 @@
+
 <div class="container" style="margin-top: 70px;">
   <div>
     <div>Raum: Marie Curieiiiii</div>
     <div>Mo, 17.06.<br />
     10:07 Uhr</div>
   </div>
-  <table class="table table-hover">
-    <tbody>
-    <tr *ngFor="let r of rooms">
+<!--  <table class="table table-hover">-->
+<!--    <tbody>-->
+<!--    <tr *ngFor="let r of rooms">-->
 
-      <td>{{ r.id }}</td>
-      <td> {{ r.name }}</td>
-      <td> {{ r.email }}</td>
-      <td>
-        <button class="btn btn-primary" (click)="bookRoom(r)"> Book room</button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-  <div class="card text-center" *ngIf="selectedRoom">
-    <div class="card-header">
-      # {{selectedRoom.id}}
-    </div>
-    <div class="card-block">
-      <h4 class="card-title">{{selectedRoom.name}}</h4>
-      <p class="card-text">
-        {{selectedRoom.description}}
-      </p>
-    </div>
+<!--      <td>{{ r.id }}</td>-->
+<!--      <td> {{ r.name }}</td>-->
+<!--      <td> {{ r.email }}</td>-->
+<!--      <td>-->
+<!--        <button class="btn btn-primary" (click)="bookRoom(r)"> Book room</button>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--  <div class="card text-center" *ngIf="selectedRoom">-->
+<!--    <div class="card-header">-->
+<!--      # {{selectedRoom.id}}-->
+<!--    </div>-->
+<!--    <div class="card-block">-->
+<!--      <h4 class="card-title">{{selectedRoom.name}}</h4>-->
+<!--      <p class="card-text">-->
+<!--        {{selectedRoom.description}}-->
+<!--      </p>-->
+<!--    </div>-->
 
-  </div>
+<!--  </div>-->
 </div>
