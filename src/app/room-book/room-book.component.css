@@ -11,7 +11,8 @@
 
 .item {
     padding: 10px;
-    background-color: coral;
+    background-color: #765D69;
+    color: #EEEEEE;
     height: 100px;
     align-content: center;
     cursor: pointer;
