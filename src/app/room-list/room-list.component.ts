@@ -11,28 +11,28 @@ import {Router} from "@angular/router";
 })
 export class RoomListComponent implements OnInit {
 
-    rooms;
-    roomsByFloor = new Map<String,Array<Room>>();
-    floors;
-    selectedRoom:Room;
+    private floors: IterableIterator<String>;
+    private roomsByFloor: Map<String, Array<Room>>;
 
-    constructor(public dataService: DataService,
+    constructor(private dataService: DataService,
                 private router: Router) {
     }
 
     ngOnInit() {
-        this.roomsByFloor.set("2.OG",new Array<Room>(new Room("1","Marie",6,"TDE_@")));
-        this.roomsByFloor.set("3.OG",new Array<Room>(new Room("2","Turing",6,"TDE_@"),
-            new Room("3","Lovelace",6,"TDE_@"),
-            new Room("3","Lovelace",6,"TDE_@"),
-            new Room("3","Lovelace",6,"TDE_@")));
-        this.roomsByFloor.set("4.OG",new Array<Room>(new Room("4","Tesla",6,"TDE_@")));
-        this.roomsByFloor.set("Extern",new Array<Room>(new Room("5","Marie",6,"TDE_@")));
-        this.floors=this.roomsByFloor.keys();
-        this.rooms = this.dataService.getRooms();
+        this.dataService.getRooms().subscribe(response => {
+            this.roomsByFloor = new Map<String, Array<Room>>();
+            response.forEach(room => {
+                var key = room.etage;
+                if (!this.roomsByFloor.has(key)){
+                    this.roomsByFloor.set(key, new Array<Room>());
+                }
+                this.roomsByFloor.get(key).push(room);
+            });
+            this.floors = this.roomsByFloor.keys();
+        });
     }
 
-    public showRoomDetails(room:Room) {
-        this.router.navigate(['room-list', room.outlookName]);
+    public showRoomDetails(room: Room) {
+        this.router.navigate(['room-list', room.id]);
     }
 }
