@@ -22,7 +22,7 @@ export class RoomListComponent implements OnInit {
         this.dataService.getRooms().subscribe(response => {
             this.roomsByFloor = new Map<String, Array<Room>>();
             response.forEach(room => {
-                var key = room.etage;
+                var key = room.meta.etage;
                 if (!this.roomsByFloor.has(key)){
                     this.roomsByFloor.set(key, new Array<Room>());
                 }

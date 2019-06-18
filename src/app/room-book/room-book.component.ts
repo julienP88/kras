@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-room-book',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./room-book.component.css']
 })
 export class RoomBookComponent implements OnInit {
+  private roomId: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      console.log(params);
+      this.roomId = params.roomId;
+    });
+  }
 
   ngOnInit() {
   }

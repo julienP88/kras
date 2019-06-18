@@ -9,8 +9,8 @@ import {RoomAgenda} from "../shared/models/RoomAgenda";
     styleUrls: ['./room-detail.component.css']
 })
 export class RoomDetailComponent implements OnInit {
-    private roomId: string;
-    private roomAgenda: RoomAgenda;
+    roomId: string;
+    roomAgenda: RoomAgenda = new RoomAgenda();
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService) {

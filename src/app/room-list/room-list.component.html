@@ -13,8 +13,8 @@
                 <div class="container">
                         <div *ngFor="let room of roomsByFloor.get(floor)" (click)="showRoomDetails(room)" >
                                <div class="item">
-                                   <h4>{{room.room}}</h4>
-                                   <p>{{room.plaetze}} Personen</p>
+                                   <h4>{{room.meta.room}}</h4>
+                                   <p>{{room.meta.plaetze}} Personen</p>
                                </div>
                         </div>
                 </div>

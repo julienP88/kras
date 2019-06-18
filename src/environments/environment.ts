@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   apiURL: 'http://localhost:3001',
-  roomsEndpoint: '/rooms/meta',
-  roomDetailEndpoint: '/rooms/id/'
+  roomsEndpoint: '/rooms',
+  roomDetailEndpoint: '/rooms/'
 
 };
 
