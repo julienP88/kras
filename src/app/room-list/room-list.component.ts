@@ -42,21 +42,31 @@ export class RoomListComponent implements OnInit {
             case AusstattungType.typ_appleTv:
                 return "fa fa-apple";
             case AusstattungType.typ_pinnwand:
-                return "fa fa-apple";
+                return "fa fa-thumb-tack";
             case AusstattungType.typ_mobVK:
-                return "fa fa-apple";
+                return "fa fa-stop";
             case AusstattungType.typ_camera:
-                return "fa fa-apple";
+                return "fa fa-video-camera";
             case AusstattungType.typ_mobPolycom:
-                return "fa fa-apple";
+                return "fa fa-microphone";
             case AusstattungType.typ_flipchart:
-                return "fa fa-apple";
+                return "fa fa-file-text-o";
             case AusstattungType.typ_whiteboard:
-                return "fa fa-apple";
+                return "fa fa-square-o";
             case AusstattungType.typ_tv:
-                return "fa fa-apple";
+                return "fa fa-desktop";
+            case AusstattungType.typ_beamer:
+                return "fa fa-hdd-o";
+            case AusstattungType.typ_polycom:
+                return "fa fa-phone";
+            case AusstattungType.typ_desktop:
+                return "fa fa-home";
             default:
-                return "fa fa-camera";
+                return "";
         }
     }
+
+
+
+
 }

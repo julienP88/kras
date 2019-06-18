@@ -6,14 +6,27 @@
     /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
     /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
     grid-gap: 10px;
+    font-family: Oswald, sans-serif;
+    font-weight: 200;
+    color: #765D69;
 }
 
 .item {
     padding: 10px;
-    background-color: coral;
+    border: 1px #765D69;
+    background-color: #EEEEEE;
     height: 120px;
     align-content: center;
     cursor: pointer;
+}
+.table-hover tbody tr:hover {
+    background-color: transparent;
+}
+
+
+.table-hover .item:hover {
+    background-color: #765D69;
+    color: #EEEEEE;
 }
 
 .red-icon{
