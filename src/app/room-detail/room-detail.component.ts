@@ -10,7 +10,7 @@ import {RoomAgenda} from "../shared/models/RoomAgenda";
 })
 export class RoomDetailComponent implements OnInit {
     private roomId: string;
-    private booking: RoomAgenda;
+    private roomAgenda: RoomAgenda;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService) {
@@ -21,7 +21,7 @@ export class RoomDetailComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.dataService.getRoomDetails(this.roomId).subscribe(value => this.booking = value);
+        this.dataService.getRoomDetails(this.roomId).subscribe(value => this.roomAgenda = value);
     }
 
 
