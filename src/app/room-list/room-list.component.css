@@ -33,3 +33,18 @@
     padding: 2px;
 }
 
+.table thead th {
+  border:none;
+}
+
+.table thead {
+  background-color: #FEFAD4;
+  color: #765D69;
+  font-size: 150%;
+}
+
+.table thead th {
+  font-weight: 400;
+  height:90px;
+  vertical-align: middle;
+}
