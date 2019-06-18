@@ -3,7 +3,6 @@ import {DataService} from '../data.service';
 import {Room} from "../shared/models/Room";
 import {Router} from "@angular/router";
 
-
 @Component({
     selector: 'app-room-list',
     templateUrl: './room-list.component.html',
@@ -13,6 +12,7 @@ export class RoomListComponent implements OnInit {
 
     floors: IterableIterator<String>;
     private roomsByFloor: Map<String, Array<Room>>;
+    ausstatungType = AusstattungType;
 
     constructor(private dataService: DataService,
                 private router: Router) {

@@ -11,12 +11,15 @@
             <td>{{ floor }}</td>
             <td class="row">
                 <div class="container">
-                        <div *ngFor="let room of roomsByFloor.get(floor)" (click)="showRoomDetails(room)" >
-                               <div class="item">
-                                   <h4>{{room.meta.room}}</h4>
-                                   <p>{{room.meta.plaetze}} Personen</p>
-                               </div>
+                    <div *ngFor="let room of roomsByFloor.get(floor)" (click)="showRoomDetails(room)">
+                        <div class="item">
+                            <h4>{{room.meta.room}}</h4>
+                            <p>{{room.meta.plaetze}} Personen</p>
+
+                                <i *ngFor="let icon of room.meta.ausstattung" class="red-icon {{getIconClass(icon)}}"></i>
+
                         </div>
+                    </div>
                 </div>
             </td>
         </tr>

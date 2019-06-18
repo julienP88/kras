@@ -4,6 +4,8 @@ import {Routes, RouterModule, ROUTER_CONFIGURATION} from '@angular/router';
 import { RoomListComponent } from './room-list/room-list.component';
 import { RoomBookComponent } from './room-book/room-book.component';
 import { RoomDetailComponent } from './room-detail/room-detail.component';
+import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [
   {path:  "", pathMatch:  "full",redirectTo:  "room-list"},

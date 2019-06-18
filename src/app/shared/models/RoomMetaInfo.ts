@@ -1,3 +1,5 @@
+import {AusstattungType} from "./AusstattungType";
+
 export class RoomMetaInfo {
     idNr: number;
     id: string;
@@ -6,5 +8,5 @@ export class RoomMetaInfo {
     tel: string;
     etage: string;
     plaetze: number;
-    ausstattungId: Array<AusstattungType>;
+    ausstattung: Array<AusstattungType>;
 }

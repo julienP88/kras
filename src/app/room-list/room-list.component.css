@@ -11,7 +11,12 @@
 .item {
     padding: 10px;
     background-color: coral;
-    height: 100px;
+    height: 120px;
     align-content: center;
     cursor: pointer;
 }
+
+.red-icon{
+    padding: 2px;
+}
+

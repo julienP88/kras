@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
 import {RoomBookComponent} from './room-book/room-book.component';
 import {RoomListComponent} from './room-list/room-list.component';
 import {HeaderComponent} from './header/header.component';
@@ -12,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
     declarations: [
         AppComponent,
+        HomeComponent,
         RoomBookComponent,
         RoomListComponent,
         HeaderComponent,

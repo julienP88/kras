@@ -1,10 +1,10 @@
-enum AusstattungType {
-    typ_mobVK,
-    typ_whiteboard,
-    typ_mobPolycom,
-    typ_flipchart,
-    typ_appleTv,
-    typ_pinnwand,
-    typ_tv,
-    typ_camera
+export enum AusstattungType {
+    typ_mobVK="typ_mobVK",
+    typ_whiteboard="typ_whiteboard",
+    typ_mobPolycom="typ_mobPolycom",
+    typ_flipchart="typ_flipchart",
+    typ_appleTv="typ_appleTv",
+    typ_pinnwand="typ_pinnwand",
+    typ_tv="typ_tv",
+    typ_camera="typ_camera"
 }
