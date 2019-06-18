@@ -2,3 +2,12 @@
     padding:2px;
     margin-left: 7px;
 }
+
+#back-button {
+  color: #FFFFFF;
+  padding: 10px 20px 10px 10px;
+}
+
+#back-button:hover {
+  color:#AAAAAA;
+}
