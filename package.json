@@ -6,7 +6,7 @@
     "start": "ng serve --host 0.0.0.0 --port 80 --disable-host-check",
     "start-prod": "ng serve --host 0.0.0.0 --port 80 --disable-host-check --prod",
     "build": "ng build",
-    "build-prod": "ng build --prod",
+    "release": "ng build --prod && rm release/kras/* && cp dist/kras/*  release/kras/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
