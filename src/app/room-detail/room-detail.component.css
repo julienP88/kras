@@ -2,6 +2,7 @@
   font-family: Oswald, sans-serif;
   font-weight: 200;
   color: #765D69;
+
 }
 
 #header-info-container {
@@ -30,11 +31,24 @@
   font-size: 130%;
 }
 
-.table .clickable td.strong {
+.table {
+  font-size: 1.2rem;
+}
+
+.table td.strong p{
+  margin-bottom: 0px;
+}
+
+.table .clickable td.strong p {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+
+.table td.strong .name{
+  color: #bca5af;
+}
+
 
 .table td, .table th {
   border-top-color: #EEEEEE;

@@ -1,4 +1,4 @@
-import {RoomMetaInfo} from "./RoomMetaInfo";
+import {RoomMetaInfo} from './RoomMetaInfo';
 
 export class Room {
     id: string;

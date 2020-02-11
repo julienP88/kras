@@ -10,7 +10,10 @@
     <tbody>
       <tr *ngFor="let appointment of roomAgenda.appointments" (click)="book(roomId, appointment)" class="{{appointment.blocked == false ? 'clickable' : '' }}">
         <td>{{ appointment.startTime|date: 'HH:mm' }} - {{ appointment.endTime|date: 'HH:mm'}}</td>
-        <td class="strong">{{ appointment.title }}</td>
+        <td class="strong">
+          <p>{{ appointment.title }}</p>
+          <p class="p name">{{ appointment.user }}</p>
+        </td>
       </tr>
     </tbody>
     </table>

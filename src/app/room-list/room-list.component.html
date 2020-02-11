@@ -16,7 +16,7 @@
                             <h4>{{room.meta.room}}</h4>
                             <p>{{room.meta.plaetze}} Personen</p>
 
-                                <i *ngFor="let icon of room.meta.ausstattung" class="red-icon {{getIconClass(icon)}}"></i>
+                                <i *ngFor="let icon of room.meta.ausstattung" class="red-icon {{getIconClass(icon)}}" title="{{getToolTyp(icon)}}"></i>
 
                         </div>
                     </div>
