@@ -44,8 +44,6 @@ export class RoomOverviewComponent implements OnInit {
     }, 300000);
   }
 
-
-
   refreshTimer() {
     // this.dataService.getRoomDetails(this.roomId).subscribe(value => this.roomAgenda = value);
     this.roomAgenda.appointments.splice(0, 1);
