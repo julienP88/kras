@@ -44,13 +44,6 @@ export class RoomOverviewComponent implements OnInit {
     }, 300000);
   }
 
-  refreshTimer() {
-    // this.dataService.getRoomDetails(this.roomId).subscribe(value => this.roomAgenda = value);
-    this.roomAgenda.appointments.splice(0, 1);
-    console.log('Reload: ' + this.roomId + ' count: ' + this.roomAgenda.appointments.length);
-    this.startTimer();
-  }
-
   book(roomId: string, appointment: Booking) {
     console.log('Book Room: ' + roomId + ' from: ' + appointment.startTime + ' to: ' + appointment.endTime);
     if (appointment.blocked === false) {
@@ -65,6 +58,7 @@ export class RoomOverviewComponent implements OnInit {
   public getOpenAppointment(): Booking {
     if (isUndefined(this.roomAgenda.appointments)) { return new Booking(); }
     if (isNull(this.appointmentNow)) {
+      console.log('Load NowAppointment');
       this.appointmentNow = this.roomAgenda.appointments.filter(this.isNow)[0];
     }
     return this.appointmentNow;
@@ -74,6 +68,7 @@ export class RoomOverviewComponent implements OnInit {
     if (isUndefined(this.roomAgenda.appointments)) { return new Booking(); }
     if (isNull(this.appointmentNext)) {
       const next = this.roomAgenda.appointments.filter(this.isNext);
+      console.log('Load NowAppointment - Count: ' + next.length );
       if (next.length > 0) {
         this.appointmentNext = next[0];
       }
@@ -85,7 +80,7 @@ export class RoomOverviewComponent implements OnInit {
     const now = new Date();
     const start = new Date(appointment.startTime);
     const end = new Date(appointment.endTime);
-    // console.log('Book Room: ' + now+ ' from: ' + start + ' to: ' + end + ' - ' + (start < now));
+    console.log('Book Room: ' + now + ' from: ' + start + ' to: ' + end + ' - ' + (start < now));
     return (start < now) && (end > now);
   }
 
