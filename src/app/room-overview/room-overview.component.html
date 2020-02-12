@@ -1,0 +1,32 @@
+<div class="container" style="margin-top: 70px;">
+  <div id="frame">
+    <div id="info-container">
+      <div id="room-name">Raum: <strong>{{roomAgenda.roomName}}</strong></div>
+      <div id="room-image"><img src="../../assets/room/{{roomId}}.jpg"></div>
+      <div id="current-date">{{ currentDateTime | date:'EEEE, dd.MM.'}}<br/>
+        {{ currentDateTime | date:'HH:mm'}} Uhr
+      </div>
+    </div>
+    <div>
+
+      <div class="item {{getOpenAppointment().blocked == false ? 'clickable' : '' }}" (click)="book(roomId, getOpenAppointment())">
+        <div class="appointment-time">{{ getOpenAppointment().startTime|date: 'HH:mm' }} - {{ getOpenAppointment().endTime|date: 'HH:mm'}}</div>
+        <div class="appointment-title">{{ getOpenAppointment().title }}</div>
+        <div class="appointment-user">{{ getOpenAppointment().user }}</div>
+      </div>
+
+      <div class="item {{getNextAppointment().blocked == false ? 'clickable' : '' }}" (click)="book(roomId, getNextAppointment())">
+        <div class="appointment-time">{{ getNextAppointment().startTime|date: 'HH:mm' }} - {{ getNextAppointment().endTime|date: 'HH:mm'}}</div>
+        <div class="appointment-title">{{ getNextAppointment().title }}</div>
+        <div class="appointment-user">{{ getNextAppointment().user }}</div>
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-item"></div>
+        <div class="footer-button" (click)="showRoomDetail()">&gt;&gt; gesamtem Tag anzeigen</div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

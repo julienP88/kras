@@ -25,6 +25,10 @@ export class RoomDetailComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.getRoomDetails(this.roomId).subscribe(value => this.roomAgenda = value);
+
+    setTimeout(() => {
+      this.router.navigate(['room-overview', this.roomId]);
+    }, 30000);  //5s
   }
 
   book(roomId: string, appointment: Booking) {

@@ -1,0 +1,126 @@
+*.container {
+  display: grid;
+  /* Display as a Grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* repeat = as many times as you can fit */
+  /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
+  /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
+  grid-gap: 10px;
+  font-family: Oswald, sans-serif;
+  font-weight: 200;
+  color: #765D69;
+}
+
+#frame {
+  display: table;
+  width: 100%;
+}
+
+#info-container {
+  position: relative;
+  display: table-cell;
+  background-color: #FEFAD4;
+  width: 250px;
+  height: 400px;
+  padding: 0 10px;
+}
+
+#info-container > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#info-container #room-name {
+  font-size: 150%;
+}
+#info-container #room-name strong {
+  font-weight: 400;
+}
+
+#info-container #room-image {
+  position: absolute;
+  top: 55px;
+}
+#info-container #room-image img{
+  width: 200px;
+  height: 250px;
+  margin-left: 15px;
+}
+
+#info-container #current-date {
+  font-size: 130%;
+  position: absolute;
+  bottom: 0;
+}
+
+.item {
+  margin-left: 25px;
+  margin-bottom: 25px;
+  padding: 10px;
+  border: 1px #765D69;
+  background-color: #EEEEEE;
+  height: 150px;
+  align-content: center;
+}
+.item:hover {
+  background-color: #765D69;
+  color: #EEEEEE;
+}
+.clickable {
+  cursor: pointer;
+}
+
+.item .appointment-time {
+  padding-top: 10px;
+  font-size: 150%;
+  text-align: center;
+}
+
+.item .appointment-title {
+  font-size: 175%;
+  text-align: center;
+}
+
+.clickable .appointment-title {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.item .appointment-user {
+  font-size: 130%;
+  font-style: italic;
+  text-align: center;
+}
+
+.footer-container {
+  margin-left: 25px;
+  margin-bottom: 25px;
+  height: 75px;
+}
+
+.footer-item {
+  padding: 10px;
+  border: 1px #765D69;
+  align-content: center;
+  cursor: pointer;
+  width: 49%;
+  float: left;
+}
+.footer-button {
+  padding: 20px;
+  border: 1px #765D69;
+  background-color: #EEEEEE;
+  font-size: 130%;
+  height: 75px;
+  text-align: center;
+  cursor: pointer;
+  width: 49%;
+  float: right;
+}
+
+.footer-button:hover {
+  background-color: #765D69;
+  color: #EEEEEE;
+}
+
