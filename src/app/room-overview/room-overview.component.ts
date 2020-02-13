@@ -55,6 +55,17 @@ export class RoomOverviewComponent implements OnInit {
     this.router.navigate(['room-list', this.roomId]);
   }
 
+  getRoomImage(): string {
+    if (isUndefined(this.roomId)) { return ''; }
+    console.log('image path: ');
+    return '../../assets/' + this.roomId + '.jpg';
+  }
+
+  getRoomImageAlt(): string {
+    if (isUndefined(this.roomAgenda)) { return ''; }
+    return this.roomAgenda.roomName;
+  }
+
   public getOpenAppointment(): Booking {
     if (isUndefined(this.roomAgenda.appointments)) { return new Booking(); }
     if (isNull(this.appointmentNow)) {

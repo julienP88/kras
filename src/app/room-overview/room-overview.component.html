@@ -2,7 +2,7 @@
   <div id="frame">
     <div id="info-container">
       <div id="room-name">Raum: <strong>{{roomAgenda.roomName}}</strong></div>
-      <div id="room-image"><img src="../../assets/room/{{roomId}}.jpg"></div>
+      <div id="room-image"><img src="{{getRoomImage()}}" alt="{{getRoomImageAlt()}}"></div>
       <div id="current-date">{{ currentDateTime | date:'EEEE, dd.MM.'}}<br/>
         {{ currentDateTime | date:'HH:mm'}} Uhr
       </div>

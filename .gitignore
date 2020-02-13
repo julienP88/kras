@@ -44,10 +44,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-src/assets/room/Raum_Curie@tde.thalia.de.jpg
-src/assets/room/Raum_Gutenberg@tde.thalia.de.jpg
-src/assets/room/Raum_Hopper@tde.thalia.de.jpg
-src/assets/room/Raum_Lamarr@tde.thalia.de.jpg
-src/assets/room/Raum_Lovelace@tde.thalia.de.jpg
-src/assets/room/Raum_Tesla@tde.thalia.de.jpg
-src/assets/room/Raum_Turing@tde.thalia.de.jpg
+src/assets/Raum_Curie@tde.thalia.de.jpg
+src/assets/Raum_Gutenberg@tde.thalia.de.jpg
+src/assets/Raum_Hopper@tde.thalia.de.jpg
+src/assets/Raum_Lamarr@tde.thalia.de.jpg
+src/assets/Raum_Lovelace@tde.thalia.de.jpg
+src/assets/Raum_Tesla@tde.thalia.de.jpg
+src/assets/Raum_Turing@tde.thalia.de.jpg
