@@ -57,7 +57,7 @@ export class RoomOverviewComponent implements OnInit {
 
   getRoomImage(): string {
     if (isUndefined(this.roomId)) { return ''; }
-    console.log('image path: ');
+    console.log('image path: ../../assets/' + this.roomId + '.jpg');
     return '../../assets/' + this.roomId + '.jpg';
   }
 
