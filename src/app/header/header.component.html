@@ -1,12 +1,15 @@
 <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-  <a id="back-button" href="javascript:history.back()"><i class="fa fa-arrow-left"></i></a>
   <a class="navbar-brand" href="#">KRAS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
           aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
+    <ul class="nav navbar-nav" routerLinkActive="active">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="room-overview/Raum_Tesla@tde.thalia.de">Raum</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="room-list/Raum_Tesla@tde.thalia.de">Termine</a></li>
     </ul>
   </div>
 </nav>
+
